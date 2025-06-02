@@ -28,11 +28,13 @@ public class PrettyPrint {
     }
 
     // Shared pretty formatting logic
-    private static String format2D(Object array2D) {
+    private static String format2D(Object array2D) 
+    {
         Object[] rows = (Object[]) array2D;
         StringBuilder sb = new StringBuilder();
         sb.append("[\n");
-        for (int i = 0; i < rows.length; i++) {
+        for (int i = 0; i < rows.length; i++) 
+        {
             Object row = rows[i];
             sb.append("  ");
             if (row instanceof int[])

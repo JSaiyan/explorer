@@ -1,10 +1,13 @@
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-public class ExplorerSearchTest {
+public class ExplorerSearchTest 
+{
     @Test
-    public void testReachableArea_someUnreachable() {
-        int[][] island = {
+    public void testReachableArea_someUnreachable() 
+    {
+        int[][] island = 
+        {
             {1,1,1,3,1,1},
             {3,2,3,1,3,1},
             {1,1,1,1,3,3},
