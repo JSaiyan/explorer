@@ -61,7 +61,9 @@ public class ExplorerSearch
         visited[row][col] = true;
 
         //track what we return at the end
-        int count = 0;
+        //has to be 1
+        //can i get there if so then count it
+        int count = 1;
 
          List<int[]> neighbors = possibleMoves(island, start);
          for(int[] neighbor : neighbors)
@@ -77,7 +79,7 @@ public class ExplorerSearch
 
 
         //where we can go method
-        public static List<int[]> possibleMoves(char[][] island, int[] start)
+        public static List<int[]> possibleMoves(int[][] island, int[] start)
         {
             //create a list that we can move through
             List<int[]> moves = new ArrayList<>();
@@ -88,7 +90,8 @@ public class ExplorerSearch
         //up
         int newR = row - 1;
         int newC = col;
-        if (newR >= 0 && island[newR][newC] == '1')
+
+        if (newR >= 0 && island[newR][newC] == 1)
         {
             moves.add(new int[] { newR, newC });
         }
@@ -96,7 +99,7 @@ public class ExplorerSearch
          //down
         newR = row + 1;
         newC = col;
-        if (newR < island.length && island[newR][newC] == '1')
+        if (newR < island.length && island[newR][newC] == 1)
         {
             moves.add(new int[] { newR, newC });
         }
@@ -105,7 +108,7 @@ public class ExplorerSearch
          //left
         newR = row;
         newC = col - 1;
-        if (newC >= 0 && island[newR][newC] == '1')
+        if (newC >= 0 && island[newR][newC] == 1)
         {
             moves.add(new int[] { newR, newC });
         }
@@ -113,7 +116,7 @@ public class ExplorerSearch
                //right
         newR = row;
         newC = col + 1;
-        if (newC < island[newR].length && island[newR][newC] == '1')
+        if (newC < island[newR].length && island[newR][newC] == 1)
         {
             moves.add(new int[] { newR, newC });
         }
