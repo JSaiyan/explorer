@@ -1,3 +1,5 @@
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -58,4 +60,15 @@ public class PrettyPrint {
         sb.append("]");
         return sb.toString();
     }
+
+    @Test
+public void testReachableArea_oneStepRight() 
+{
+    int[][] island = 
+    {
+        {0, 1}
+    };
+    int actual = ExplorerSearch.reachableArea(island);
+    assertEquals(2, actual);
+}
 }

@@ -4,6 +4,8 @@ import org.junit.Test;
 public class ExplorerSearchTest 
 {
     @Test
+    //tests islands (1) water (2) mountains (3) and starting point (0)
+    //must not go out of bounds
     public void testReachableArea_someUnreachable() 
     {
         int[][] island = 
@@ -18,6 +20,6 @@ public class ExplorerSearchTest
         assertEquals(14, actual);
     }
 
-    // Add more tests here!
-    // Come up with varied cases
+    @Test
+    
 }
